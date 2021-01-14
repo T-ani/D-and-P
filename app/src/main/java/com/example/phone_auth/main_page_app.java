@@ -14,18 +14,21 @@ public class main_page_app extends AppCompatActivity {
 
     Button log_out_button;
     FirebaseAuth firebaseAuth;
+    SharedPrefernceConfiguration sharedPreferenceConfig;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page_app);
         log_out_button=findViewById(R.id.log_out_button);
         firebaseAuth=FirebaseAuth.getInstance();
+        sharedPreferenceConfig=new SharedPrefernceConfiguration(getApplicationContext());
 
 
         log_out_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 firebaseAuth.signOut();
+                sharedPreferenceConfig.login_status(false);
                 startActivity(new Intent(main_page_app.this,MainActivity.class));
                 finish();
             }

@@ -55,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Email"
-            android:autoSizeMinTextSize="@dimen/cardview_compat_inset_shadow"
+            android:textSize="25dp"
             android:textColor="@color/blue"
             android:textStyle="bold"
             android:fontFamily="@font/sirin_stencil"
@@ -64,7 +64,6 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="40dp"
-            android:autoSizeTextType="uniform"
             />
 
     </RadioGroup>
